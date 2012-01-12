@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="#FFFFFF">
+	
+    <ImageView android:id="@+id/options_view" 
+    	android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginBottom="20dp"
+	    android:src="@drawable/options" />
+	    
+	    
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="0"
+		android:layout_below="@id/options_view" >
+		
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/options_tilt_mode_view"
+			android:background="#333333"
+			android:layout_marginBottom="1dp"
+			android:minHeight="50dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="3dp"
+			android:paddingRight="3dp" >
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+		   			android:layout_height="wrap_content"
+		   			android:text="@string/options_tilt_mode" />
+			    <TextView android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="10sp"
+			    	android:text="@string/options_tilt_mode_expl" />			
+		    </LinearLayout>
+		    
+			<CheckBox android:layout_width="wrap_content"
+				android:id="@+id/checkbox_tilt"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="right|center_vertical" />
+			
+		</TableRow>
+	
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/options_tilt_threshold_view"
+			android:layout_marginBottom="1dp"
+			android:background="#333333"
+			android:minHeight="50dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="3dp"
+			android:paddingRight="3dp" >
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+		   			android:layout_height="wrap_content"
+		   			android:text="@string/options_tilt_threshold" />
+			    <TextView android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="10sp"
+			    	android:text="@string/options_tilt_threshold_expl" />
+		    </LinearLayout>
+			
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/arrow" 
+				android:layout_gravity="center_vertical|right" />
+				
+		</TableRow>
+		
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/options_tilt_automatic_pause_view"
+			android:background="#333333"
+			android:layout_marginBottom="1dp"
+			android:minHeight="50dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="3dp"
+			android:paddingRight="3dp" >
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+		   			android:layout_height="wrap_content"
+		   			android:text="@string/options_automatic_pause" />
+			    <TextView android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="10sp"
+			    	android:text="@string/options_automatic_pause_expl" />			
+		    </LinearLayout>
+		    
+			<CheckBox android:layout_width="wrap_content"
+				android:id="@+id/checkbox_pause"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right|center_vertical" />
+			
+		</TableRow>
+		
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/options_automatic_pause_delay_view"
+			android:background="#333333"
+			android:layout_marginBottom="1dp"
+			android:minHeight="50dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="3dp"
+			android:paddingRight="3dp" >
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+		   			android:layout_height="wrap_content"
+		   			android:text="@string/options_automatic_pause_delay" />
+			    <TextView android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="10sp"
+			    	android:text="@string/options_automatic_pause_delay_expl" />			
+		    </LinearLayout>
+		    
+		    <Spinner android:id="@+id/spinner1"
+		    	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:prompt="@string/options_pause_delay_sprinner_prompt"
+		    	android:entries="@array/options_pause_delay_times"
+				android:layout_gravity="right|center_vertical" />
+		    	
+		</TableRow>
+		
+<!-- 		
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/options_colour_override_view"
+			android:background="#333333"
+			android:layout_marginBottom="1dp"
+			android:minHeight="50dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="3dp"
+			android:paddingRight="3dp" >
+			
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+		   			android:layout_height="wrap_content"
+		   			android:text="@string/options_colour_override" />
+			    <TextView android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:textSize="10sp"
+			    	android:text="@string/options_colour_override_expl" />			
+		    </LinearLayout>
+		    
+			<CheckBox android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right|center_vertical" />
+			
+		</TableRow>
+-->
+	</TableLayout>
+</RelativeLayout>

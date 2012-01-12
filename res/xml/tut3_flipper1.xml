@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<settings flipsAllowed="2" />
+<colour wall="094094094" bg="192192192" background_texture="spice_fields" spike="100050050" player="000128000" goal="064255064" barrier="064255255" flipper="094094094" />
+<bounds x="479.0" y="799.0" />
+<player x="10" y="700" gravity="1" />
+<goal x="25" y="490" />
+
+<wall x1="0.0" y1="0.0" x2="9.0" y2="799.0" texture="terraforming_mission" />
+<wall x1="470.0" y1="0.0" x2="479.0" y2="799.0" texture="terraforming_mission" />
+<wall x1="10.0" y1="0.0" x2="469.0" y2="9.0" texture="terraforming_mission" />
+<wall x1="10.0" y1="790.0" x2="469.0" y2="799.0" texture="terraforming_mission" />
+<wall x1="10.0" y1="560.0" x2="109.0" y2="609.0" texture="terraforming_mission" />
+<!--<wall x1="10.0" y1="560.0" x2="109.0" y2="584.0" texture="terraforming_mission" />-->
+
+<spike x1="55.0" y1="10.0" x2="455.0" y2="34.0" rot="2" />
+<spike x1="445.0" y1="40.0" x2="469.0" y2="765.0" rot="3" />
+<spike x1="55.0" y1="765.0" x2="355.0" y2="789.0" rot="0" />
+<spike x1="360.0" y1="765.0" x2="460.0" y2="789.0" rot="0" />
+<spike x1="10.0" y1="610.0" x2="110.0" y2="634.0" rot="2" />
+<spike x1="110.0" y1="560.0" x2="134.0" y2="610.0" rot="1" />
+
+<flipper x1="185.0" y1="705.0" x2="209.0" y2="729.0" rot="2" />
+
+</resources>

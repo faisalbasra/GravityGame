@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="horizontal"
+    android:background="#00000000" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+		android:layout_centerHorizontal="true"
+		android:paddingLeft="3dp"
+		android:paddingRight="3dp"
+        android:minWidth="200dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/pause_menu" />
+            
+			<Button
+                android:id="@+id/resume_game_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="#333333"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/pause_menu_resume_game"
+                android:textColor="#FFFFFF"
+                android:textSize="10dp" />
+        
+        	<Button
+                android:id="@+id/pan_map_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="#333333"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/pause_menu_pan_map"
+                android:textColor="#FFFFFF"
+                android:textSize="10dp" />
+        
+             <Button
+                android:id="@+id/main_menu_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="#333333"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/pause_menu_main_menu"
+                android:textColor="#FFFFFF"
+                android:textSize="10dp" />
+
+    </TableLayout>
+
+</LinearLayout>

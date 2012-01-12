@@ -1,0 +1,60 @@
+TO FIX:
+**FIXED?-Rotating the phone to trigger autoPause, then unpausing in the original direction, still costs you one flip, stat-wise.
+
+-Rotation mode is a bit iffy when going to <dir>, then neutral, then <dir> again. Resolve it.
+
+
+::Regarding the tilt calibration::
+Try making the player first assume a start-out position, store it, and then store all four directions as offsets based on the start-out position.
+Example: starting pitch value is -65. After tilting forward to desired position, the pitch is -30. Save the forward threshold as -25.
+
+If the above approach is used, consider letting users press KEY_SEARCH to set a new start-out position, from the current..
+
+If not the above, let KEY_SEARCH toggle tilt mode? Appropriate message needs to be displayed on toggle, to prevent accidental confusion.
+
+
+
+-Try using System.exit to quit the game from the menu
+
+IGNORING; HAX WILL HAVE TO DO :: -Deal with the 1 px offset thing when drawing stuff
+
+DONE, MAGNUS; -Implement the scannable view mode for the pause menu; pause game, click button, allow touching screen to center on finger.	
+
+IGNORE; -See if the draw order can be fixed? If not, we'll need to add a short spike or something, for tight levels
+	DO THIS	-Or just scrap the maze, which is the only level using them ATM
+
+-BUG: collectibles are not restored on level reset, because passing GameplayView to player on death doesn't serve as a reference
+
+DONE;-Need to fix the Dpad/arrow key movement when inverted and in tilt mode; it assumes rotation mode and compensates
+
+
+
+
+DONE-Unpause autopaused game by tapping screen
+
+DONE-Differentiate between self-paused (menu button) and auto-paused (due to phone gyro) game. Use a second variable?;
+		game pauses identically, but if auto-paused a different "tap to resume" minimalistic screen is shown.
+		
+DONE	-When fully paused (paused && !auto-paused), show an elaborate menu with buttons and no tap-to-resume.
+	
+DONE-Finish variable walking
+NOTE	-Slimmed down the movePlayer function, it figures out the direction based on a screen position alone.
+		 To invoke it for non-touch (e.g. directional pad), give an extreme value (0 or screen<Width/Height>) matching the desired direction
+	
+DONE	-Make barriers work; allow pass-through on all sides but one (rotation)
+	
+DONE -Make flippers work
+	
+PROBABLY NOT	-Tweak the speed? May want the option of crawling across the screen when practically on top of the character
+	
+MAGNUS DONE-ISH	-Create a tweakable object that can be placed in a level to display a message &| image, optionally disappearing on its own after a timer expires.
+	
+Level editor:
+DONE, DIFFERENT IMPL.	-Add a level config obj or a mini-parser for the level description (set it as caption for easy view, add alter key
+		in-game) to let user set "flipCount" (player.flipsLeft) and "flipCost" (player.flipCost)
+	-Add ^ support for target times/flips
+SKIPPED	-Add ^ support for gravity strength, as a float that's added/subtracted directly to player's velocity
+	
+	**INSTEAD OF THE PARSER
+		Just set a variable in the room creation code (global I guess), since we don't care about gravity strength anymore.
+		Path of least resistance.
